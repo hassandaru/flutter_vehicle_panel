@@ -31,11 +31,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.3
+  http: ^0.13.5
   json_serializable: ^6.5.4
   json_annotation: ^4.7.0
   http_methods: ^1.1.0
-
 
 
 

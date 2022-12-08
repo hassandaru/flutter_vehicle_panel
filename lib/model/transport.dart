@@ -22,6 +22,10 @@ class Transport {
     required this.image
   });
 
+  Transport.blank()
+  : id = -1, engineSwitch = false, speed = -1, distance = -1.0 , handBrakeSwitch = false, image = "/lib/sample.jpg";
+
+
   factory Transport.fromJson(Map<String, dynamic> json) =>
       _$TransportFromJson(json);
 
