@@ -75,10 +75,6 @@ class _TransportDetailState extends State<TransportDetail> {
   List<Widget> _renderDetails(BuildContext context, Transport transport) {
     var allValues = <Widget>[];
     var items = ["id", "engineSwitch", "speed", "distance", "handBrakeSwitch"];
-    //should be an list of Widgets
-    // var result = items.map((item) => {
-    //   _renderIndividualColumn(context, convertFieldToTextDescription(item))
-    // });
     for (var item in items) {
       allValues.add(_renderIndividualColumn(context, convertFieldToTextDescription(item)));
     }

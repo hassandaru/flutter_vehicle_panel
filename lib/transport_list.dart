@@ -22,12 +22,13 @@ class _TransportListState extends State<TransportList> {
   }
 
   loadData() async {
-    final transport = await MockTransport.fetchAll();
-    // if (this.mounted) {
+    // final transport = await MockTransport.fetchAll();
+    final transport = await APIService().fetchAll();
+    if (this.mounted) {
       setState(() {
         this.transports = transport;
       });
-    // }
+    }
   }
 
 
