@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vehicle_panel/model/transport.dart';
+import 'package:vehicle_panel/models/transport.dart';
 import 'package:vehicle_panel/transport_detail.dart';
 import 'styles.dart';
 import 'package:vehicle_panel/Network/api_calls.dart';
@@ -22,8 +22,8 @@ class _TransportListState extends State<TransportList> {
   }
 
   loadData() async {
-    // final transport = await MockTransport.fetchAll();
-    final transport = await APIService().fetchAll();
+    final transport = await MockTransport.fetchAll();
+    // final transport = await APIService().fetchAll();
     if (this.mounted) {
       setState(() {
         this.transports = transport;
@@ -78,11 +78,11 @@ class _TransportListState extends State<TransportList> {
   }
 
   Widget _itemTitle(Transport transport) {
-    return Text('${transport.id}', style: Styles.textDefault, );
+    return Text('${transport.entry_id}', style: Styles.textDefault, );
   }
 
   Widget _itemEngine(Transport transport) {
-    var value = transport.engineSwitch ? "on" : "off";
+    var value = transport.engine ? "on" : "off";
     return Text(value, style: Styles.textDefault, textAlign: TextAlign.end, );
   }
 }

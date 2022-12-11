@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:vehicle_panel/model/transport.dart';
+import 'package:vehicle_panel/models/transport.dart';
 
 import 'API.dart';
 import 'package:http/http.dart' as http;
@@ -14,7 +14,8 @@ class APIService {
     // var response = await http.get(url);
     // var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
     // var response = await http.get(Uri.parse('http://localhost:3001/vehicles'));
-    var response = await http.get(Uri.parse('http://localhost:3001/vehicles'));
+    var response = await http.get(Uri.parse('https://fluttercrashcourse.com/api/v1/locations'));
+
     if (response.statusCode == 200) {
       print("so it did execute");
     //   //convert objects and return the list of transports

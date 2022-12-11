@@ -1,5 +1,5 @@
 import 'package:http_methods/http_methods.dart';
-import 'package:vehicle_panel/model/transport.dart';
+import 'package:vehicle_panel/models/transport.dart';
 import 'package:http/http.dart' as http;
 import 'package:vehicle_panel/Network/API.dart';
 

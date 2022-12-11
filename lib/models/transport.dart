@@ -5,25 +5,25 @@ part 'transport.g.dart';
 
 @JsonSerializable()
 class Transport {
-  final int id;
-  final bool engineSwitch;
+  final int entry_id;
+  final bool engine;
   final int speed;
   final double distance;
-  final bool handBrakeSwitch;
+  final bool hand_brake;
   final String image;
 
   Transport(
   {
-    required this.id,
-    required this.engineSwitch,
+    required this.entry_id,
+    required this.engine,
     required this.speed,
     required this.distance,
-    required this.handBrakeSwitch,
+    required this.hand_brake,
     required this.image
   });
 
   Transport.blank()
-  : id = -1, engineSwitch = false, speed = -1, distance = -1.0 , handBrakeSwitch = false, image = "/lib/sample.jpg";
+  : entry_id = -1, engine = false, speed = -1, distance = -1.0 , hand_brake = false, image = "/lib/sample.jpg";
 
 
   factory Transport.fromJson(Map<String, dynamic> json) =>

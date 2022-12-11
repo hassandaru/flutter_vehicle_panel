@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vehicle_panel/Network/API.dart';
 import 'package:vehicle_panel/mock/mock_transport.dart';
-import 'model/transport.dart';
+import 'package:vehicle_panel/models/transport.dart';
 import 'styles.dart';
 
 class TransportDetail extends StatefulWidget {
@@ -74,7 +74,7 @@ class _TransportDetailState extends State<TransportDetail> {
 
   List<Widget> _renderDetails(BuildContext context, Transport transport) {
     var allValues = <Widget>[];
-    var items = ["id", "engineSwitch", "speed", "distance", "handBrakeSwitch"];
+    var items = ["entry_id", "engine", "speed", "distance", "hand_brake"];
     for (var item in items) {
       allValues.add(_renderIndividualColumn(context, convertFieldToTextDescription(item)));
     }
@@ -83,19 +83,18 @@ class _TransportDetailState extends State<TransportDetail> {
 
   String convertFieldToTextDescription(String typeOfEntity) {
     switch (typeOfEntity) {
-      case "id":
-        return "ID : ${transport.id}";
-      case "engineSwitch":
-        final switchValue = transport.engineSwitch ? "On" : "0ff";
+      case "entry_id":
+        return "ID : ${transport.entry_id}";
+      case "engine":
+        final switchValue = transport.engine ? "On" : "0ff";
         return "Engine Switch is $switchValue";
       case "speed":
         return "Speed : ${transport.speed}";
       case "distance":
-        return "Speed : ${transport.distance}";
-      case "handBrakeSwitch":
-        final switchValue = transport.handBrakeSwitch ? "On" : "0ff";
-        return "Engine Switch is $switchValue";
-        break;
+        return "Distance : ${transport.distance}";
+      case "hand_brake":
+        final switchValue = transport.hand_brake ? "On" : "0ff";
+        return "Engine Switch is ";
       default:
         return "wrong field given";
     }

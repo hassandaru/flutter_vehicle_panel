@@ -7,19 +7,19 @@ part of 'transport.dart';
 // **************************************************************************
 
 Transport _$TransportFromJson(Map<String, dynamic> json) => Transport(
-      id: json['id'] as int,
-      engineSwitch: json['engineSwitch'] as bool,
+      entry_id: json['entry_id'] as int,
+      engine: json['engine'] as bool,
       speed: json['speed'] as int,
       distance: (json['distance'] as num).toDouble(),
-      handBrakeSwitch: json['handBrakeSwitch'] as bool,
+      hand_brake: json['hand_brake'] as bool,
       image: json['image'] as String,
     );
 
 Map<String, dynamic> _$TransportToJson(Transport instance) => <String, dynamic>{
-      'id': instance.id,
-      'engineSwitch': instance.engineSwitch,
+      'entry_id': instance.entry_id,
+      'engine': instance.engine,
       'speed': instance.speed,
       'distance': instance.distance,
-      'handBrakeSwitch': instance.handBrakeSwitch,
+      'hand_brake': instance.hand_brake,
       'image': instance.image,
     };
